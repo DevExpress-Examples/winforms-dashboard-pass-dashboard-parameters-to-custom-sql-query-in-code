@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="Dashboard" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="nwindConnection" ProviderKey="Access97">
+        <Parameters>
+          <Parameter Name="database" Value="..\..\Data\nwind.mdb" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="" />
+          <Parameter Name="password" Value="" />
+        </Parameters>
+      </Connection>
+      <Query Type="CustomSqlQuery" Name="SalesPerson">
+        <Sql>select *
+  from SalesPerson</Sql>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="SalesPerson">
+            <Field Name="OrderID" Type="Int32" />
+            <Field Name="Country" Type="String" />
+            <Field Name="FirstName" Type="String" />
+            <Field Name="LastName" Type="String" />
+            <Field Name="ProductName" Type="String" />
+            <Field Name="CategoryName" Type="String" />
+            <Field Name="OrderDate" Type="DateTime" />
+            <Field Name="UnitPrice" Type="Decimal" />
+            <Field Name="Quantity" Type="Int16" />
+            <Field Name="Discount" Type="Single" />
+            <Field Name="Extended Price" Type="Decimal" />
+            <Field Name="Sales Person" Type="String" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="Chart 1" ShowCaption="false" DataSource="dashboardSqlDataSource1" DataMember="SalesPerson">
+      <DataItems>
+        <Dimension DataMember="OrderDate" ColoringMode="Hue" UniqueName="DataItem0" />
+        <Dimension DataMember="OrderDate" DateTimeGroupInterval="Month" UniqueName="DataItem2" />
+        <Measure DataMember="Extended Price" Name="Extended Price" UniqueName="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+        <Argument UniqueName="DataItem2" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple SeriesType="StackedBar">
+              <Value UniqueName="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Grid ComponentName="gridDashboardItem1" Name="Grid 1" ShowCaption="false" DataSource="dashboardSqlDataSource1" DataMember="SalesPerson">
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Dimension DataMember="Sales Person" UniqueName="DataItem0" />
+        <Measure DataMember="Extended Price" Name="Extended Price" UniqueName="DataItem1" />
+      </DataItems>
+      <FormatRules>
+        <GridItemFormatRule Name="FormatRule 1" DataItem="DataItem1">
+          <FormatConditionValue Condition="Greater">
+            <AppearanceSettings AppearanceType="FontGreen" />
+            <Value1 Type="System.Decimal" Value="50000" />
+          </FormatConditionValue>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 2" DataItem="DataItem1">
+          <FormatConditionValue Condition="Between">
+            <AppearanceSettings AppearanceType="FontYellow" />
+            <Value1 Type="System.Decimal" Value="25000" />
+            <Value2 Type="System.Decimal" Value="50000" />
+          </FormatConditionValue>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 3" DataItem="DataItem1">
+          <FormatConditionValue Condition="Less">
+            <AppearanceSettings AppearanceType="FontRed" />
+            <Value1 Type="System.Decimal" Value="25000" />
+          </FormatConditionValue>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridDimensionColumn Weight="72.471910112359552">
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Weight="77.528089887640448">
+          <Measure UniqueName="DataItem1" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions ColumnWidthMode="Manual" />
+    </Grid>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="gridDashboardItem1" Weight="30.538922155688624" />
+      <LayoutItem DashboardItem="chartDashboardItem1" Weight="69.461077844311376" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>
