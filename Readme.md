@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Form1.cs](./CS/Dashboard_ParametersAndCustomSQL/Form1.cs) (VB: [Form1.vb](./VB/Dashboard_ParametersAndCustomSQL/Form1.vb))
+<!-- default file list end -->
 # How to pass a dashboard parameter to a custom SQL query in code
 
 
