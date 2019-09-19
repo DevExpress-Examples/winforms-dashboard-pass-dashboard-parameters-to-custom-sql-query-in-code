@@ -13,9 +13,9 @@ namespace Dashboard_ParametersAndCustomSQL {
 
             // Creates a new dashboard parameter.
             StaticListLookUpSettings staticSettings = new StaticListLookUpSettings();
-            staticSettings.Values = new string[] { "1994", "1995", "1996" };
+            staticSettings.Values = new string[] { "2014", "2015", "2016" };
             DashboardParameter yearParameter = new DashboardParameter("yearParameter", 
-                typeof(string), "1995", "Select year:", true, staticSettings);
+                typeof(string), "2015", "Select year:", true, staticSettings);
             dashboard.Parameters.Add(yearParameter);
 
             DashboardSqlDataSource dataSource = (DashboardSqlDataSource)dashboard.DataSources[0];
