@@ -10,11 +10,9 @@ This example demonstrates how to [create a new dashboard parameter](https://docs
 
 ![screenshot](/images/screenshot.png)
 
-<!-- default file list -->
-## Files to look at
+## Files to Review
 
 * [Form1.cs](./CS/Dashboard_ParametersAndCustomSQL/Form1.cs) (VB: [Form1.vb](./VB/Dashboard_ParametersAndCustomSQL/Form1.vb))
-<!-- default file list end -->
 
 ## Documentation
 
@@ -23,10 +21,10 @@ This example demonstrates how to [create a new dashboard parameter](https://docs
 
 ## More Examples
 
-* [How to: Pass a Dashboard Parameter to a Filter String in Code](https://github.com/DevExpress-Examples/how-to-pass-a-dashboard-parameter-to-a-filter-string-in-code-e5117)
-* [How to: Pass a Dashboard Parameter to a Calculated Field's Expression in Code](https://github.com/DevExpress-Examples/how-to-pass-a-dashboard-parameter-to-a-calculated-fields-expression-in-code-e5135)
-* [How to: Pass a Hidden Dashboard Parameter to a Custom SQL Query in the WinForms Viewer](https://github.com/DevExpress-Examples/how-to-pass-a-hidden-dashboard-parameter-to-a-custom-sql-query-in-the-winforms-viewer-t338459)
-* [How to: Specify Default Parameter Values in the WinForms Viewer](https://github.com/DevExpress-Examples/how-to-specify-default-parameter-values-in-the-winforms-viewer-t475858)
-* [How to: Use Dashboard Parameters with the Expression Format Condition](https://github.com/DevExpress-Examples/how-to-usedashboard-parameters-with-the-expressionformat-condition-t260065)
-* [How to: Manage Parameters in the WinForms Viewer](https://github.com/DevExpress-Examples/winforms-dashboard-how-to-manage-dashboard-parameters-in-code-t635871)
-* [How to: Display the Others Slice in the Pie Chart](https://github.com/DevExpress-Examples/how-to-display-pie-chart-others-slice)
+* [Dashboard for WinForms - How to Pass a Dashboard Parameter to a Filter String](https://github.com/DevExpress-Examples/how-to-pass-a-dashboard-parameter-to-a-filter-string-in-code-e5117)
+* [Dashboard for WinForms - How to Pass a Dashboard Parameter to a Calculated Field's Expression](https://github.com/DevExpress-Examples/how-to-pass-a-dashboard-parameter-to-a-calculated-fields-expression-in-code-e5135)
+* [Dashboard for WinForms - Pass a Hidden Dashboard Parameter to a Custom SQL query](https://github.com/DevExpress-Examples/how-to-pass-a-hidden-dashboard-parameter-to-a-custom-sql-query-in-the-winforms-viewer-t338459)
+* [Dashboard for WinForms - Specify Default Parameter Values for the Dashboard Loaded in the WinForms Viewer](https://github.com/DevExpress-Examples/how-to-specify-default-parameter-values-in-the-winforms-viewer-t475858)
+* [Dashboard for WinForms - Use dashboard parameters with the Expression format condition](https://github.com/DevExpress-Examples/how-to-usedashboard-parameters-with-the-expressionformat-condition-t260065)
+* [Dashboard for WinForms - How to manage dashboard parameters in coder](https://github.com/DevExpress-Examples/winforms-dashboard-how-to-manage-dashboard-parameters-in-code-t635871)
+* [Dashboard for WinForms - Display the Others Slice in the Pie Chart](https://github.com/DevExpress-Examples/how-to-display-pie-chart-others-slice)
